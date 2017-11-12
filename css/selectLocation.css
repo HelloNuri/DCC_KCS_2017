@@ -1,0 +1,193 @@
+@charset "UTF-8";
+@font-face {
+  font-family: NanumBarunGothic;
+  src: url(../font/NanumBarunGothic.ttf) format('truetype');
+}
+
+.float {
+  float: left;
+}
+
+.relative {
+  /*position absoulte의 기준이 될 요소*/
+  position: relative;
+}
+
+.nanumFont {
+  font-family: 'NanumBarunGothic';
+  text-align: left;
+}
+/* 개발용, 테두리 추가 */
+.test{
+  border: 1px solid black;
+}
+
+html {
+  width: 1920px;
+  height: 1080px;
+}
+
+body {
+  margin: 0 0;
+}
+
+#topMenu{
+  width: auto;
+  height: 140px;
+}
+
+#topMenu>article#logo {
+  width: 248px;
+  height: 70px;
+  margin-top: 35px;
+  margin-left: 64px;
+  margin-right: 100px;
+  background-color: red;
+}
+
+#topMenu>article#search {
+  width: 473px;
+  height: 58px;
+  padding-left: 25px;
+  margin-top: 40px;
+  border-radius: 5px;
+  border: solid 1px #ef4160;
+  display: flex;
+  align-items: center;
+}
+
+#topMenu>article#search input {
+  width: auto;
+  height: auto;
+  border: none;
+  font-size: 24px;
+  letter-spacing: 2.4px;
+  text-align: left;
+  outline: none;
+  /* 세로 중앙 정렬 */
+  position: relative;
+  top: 2px;
+}
+
+#topMenu>article#status {
+  width: 280px;
+  height: 60px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+
+#topMenu>article#status>div#profilePicArea {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: linear-gradient(to right,#df128b,#ff6f36);
+  background-image: url('../img/pic_profile.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#topMenu>article#status>span {
+  font-size: 28px;
+  color: #ef4664;
+  letter-spacing: 2.8px;
+}
+
+#topMenu>article#status>span#nickname {
+  top : 15px;
+  left : 100px;
+  font-weight: bold;
+}
+
+#topMenu>article#status>span#nickname>span#nomenclature {
+  font-weight: normal;
+}
+
+#mainContent{
+  width: 1920px;
+  height: 940px;
+  /*background-color: rgb(254, 254, 254);*/
+  /*background-color: rgb(240, 240, 240);*/
+  background-color: #F0F0F0;
+}
+
+#mainContent>article#containerAdminMap{
+  width: 560px;
+  height: 820px;
+  margin-top: 60px;
+  margin-right: 70px;
+  margin-left: 63px;
+  border: solid 2px #ef4160;
+  border-radius: 5px;
+}
+
+#mainContent>section#selectLocation{
+  width: 540px;
+  height: 820px;
+  margin-top: 45px;
+  margin-right: 80px;
+}
+
+#mainContent>section#selectLocation>article#topLocationMenu>span#location{
+  margin-left: 13px;
+  font-size: 64px;
+  font-weight: bold;
+  color: #ef4664;
+}
+
+#mainContent>section#selectLocation>article#topLocationMenu>span#findLocation{
+  margin-left: 13px;
+  font-size: 33px;
+  font-weight: 300;
+  color: #ef4664;
+}
+
+#mainContent>article#choiceFacilities{
+  width: 523px;
+  height: 820px;
+
+  margin-top: 50px;
+}
+
+#mainContent>article#choiceFacilities>span#locationDo{
+  margin-right: 53px;
+  font-size: 64px;
+  font-weight: bold;
+  color: #ef4664;
+}
+
+#mainContent>article#choiceFacilities>span#locationGu{
+  font-size: 36px;
+  color: #ef4160;
+}
+
+#mainContent>article#choiceFacilities>button#facilitiesCenter{
+  width: 520px;
+  height: 100px;
+  margin-top: 55px;
+  margin-bottom: 50px;
+  margin-left: 3px;
+  color: #ef4160;
+  font-size: 28px;
+  letter-spacing: 2.8px;
+  border: solid 1px #ef4160;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#mainContent>article#choiceFacilities>button#facilities{
+  width: 520px;
+  height: 100px;
+  margin-right: 3px;
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 2.8px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right,#df128b,#ff6f36);
+}
+
+#mainContent>article#choiceFacilities>button:focus, #mainContent>article#choiceFacilities>button:active {
+  outline: none;
+}
