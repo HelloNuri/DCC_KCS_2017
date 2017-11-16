@@ -1,0 +1,66 @@
+article#titleArea{
+  margin-top: 50px;
+  margin-left: 64px;
+  margin-bottom: 50px;
+}
+article#titleArea>span#title{
+  font-size: 64px;
+  font-weight: bold;
+  color: #ef4160;
+}
+article#titleArea>span#location{
+  font-size: 36px;
+  color: #ef4160;
+}
+section#mapArea{
+  width: 800px;
+  height: 560px;
+  margin-left: 64px;
+}
+section#mapArea>div#map{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ef4160;
+}
+section#informationArea{
+  width: 830px;
+  height: 560px;
+  border: 1px solid black;
+  position: static;
+  position: absolute;
+  top: 310px;
+  right: 130px;
+  /*margin-left: 100px;*/
+}
+section#informationArea{
+  display: block;
+  float: left;
+}
+section#informationArea span.information1{
+  display: inline-block;
+  width: 200px;
+  text-align: left;
+  color: #ef4160;
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 60px;
+}
+section#informationArea span.information{
+  font-size: 24px;
+  color: #ef4160;
+  margin-bottom: 60px;
+}
+section#informationArea span.information2{
+  display: inline-block;
+  width: 200px;
+  text-align: left;
+  color: #ef4160;
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 38px;
+}
+section#informationArea span.information3{
+  font-size: 24px;
+  color: #ef4160;
+  margin-bottom: 38px;
+}

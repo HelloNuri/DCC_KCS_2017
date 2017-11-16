@@ -1,117 +1,9 @@
-@charset "UTF-8";
-@font-face {
-  font-family: NanumBarunGothic;
-  src: url(../font/NanumBarunGothic.ttf) format('truetype');
-}
-
-.float {
-  float: left;
-}
-
-.relative {
-  /*position absoulte의 기준이 될 요소*/
-  position: relative;
-}
-
-.nanumFont {
-  font-family: 'NanumBarunGothic';
-  text-align: left;
-}
-/* 개발용, 테두리 추가 */
-.test{
-  border: 1px solid black;
-}
-
-html {
-  width: 1920px;
-  height: 1080px;
-}
-
-body {
-  margin: 0 0;
-}
-
-#topMenu{
-  width: auto;
-  height: 140px;
-}
-
-#topMenu>article#logo {
-  width: 248px;
-  height: 70px;
-  margin-top: 35px;
-  margin-left: 64px;
-  margin-right: 100px;
-  background-color: red;
-}
-
-#topMenu>article#search {
-  width: 473px;
-  height: 58px;
-  padding-left: 25px;
-  margin-top: 40px;
-  border-radius: 5px;
-  border: solid 1px #ef4160;
-  display: flex;
-  align-items: center;
-}
-
-#topMenu>article#search input {
-  width: auto;
-  height: auto;
-  border: none;
-  font-size: 24px;
-  letter-spacing: 2.4px;
-  text-align: left;
-  outline: none;
-  /* 세로 중앙 정렬 */
-  position: relative;
-  top: 2px;
-}
-
-#topMenu>article#status {
-  width: 280px;
-  height: 60px;
-  position: absolute;
-  top: 40px;
-  right: 0;
-}
-
-#topMenu>article#status>div#profilePicArea {
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
-  background: linear-gradient(to right,#df128b,#ff6f36);
-  background-image: url('../img/pic_profile.png');
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#topMenu>article#status>span {
-  font-size: 28px;
-  color: #ef4664;
-  letter-spacing: 2.8px;
-}
-
-#topMenu>article#status>span#nickname {
-  top : 15px;
-  left : 100px;
-  font-weight: bold;
-}
-
-#topMenu>article#status>span#nickname>span#nomenclature {
-  font-weight: normal;
-}
-
+/*본문*/
 #mainContent{
   width: 1920px;
   height: 940px;
-  /*background-color: rgb(254, 254, 254);*/
-  /*background-color: rgb(240, 240, 240);*/
-  background-color: #F0F0F0;
 }
-
+  /*지역 지도 영역*/
 #mainContent>article#containerAdminMap{
   width: 560px;
   height: 820px;
@@ -120,48 +12,81 @@ body {
   margin-left: 63px;
   border: solid 2px #ef4160;
   border-radius: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+    /*마커*/
+#mainContent>article#containerAdminMap>div#adminMapMarker{
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: blue;
+  position: absolute;
+  top: 430px;
+}
+  /*지역 목록 영역*/
 #mainContent>section#selectLocation{
   width: 540px;
   height: 820px;
   margin-top: 45px;
   margin-right: 80px;
 }
-
+    /*도 단위 지역(굵은글씨)*/
 #mainContent>section#selectLocation>article#topLocationMenu>span#location{
   margin-left: 13px;
   font-size: 64px;
   font-weight: bold;
   color: #ef4664;
 }
-
+    /* "지역 시설 찾기" */
 #mainContent>section#selectLocation>article#topLocationMenu>span#findLocation{
   margin-left: 13px;
   font-size: 33px;
   font-weight: 300;
   color: #ef4664;
 }
-
+    /*지역 목록 영역*/
+#mainContent>section#selectLocation>article#list{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+      /*지역 목록 요소*/
+#mainContent>section#selectLocation>article#list li.list{
+  width: 130px;
+  height: 50px;
+  margin: 0 10px 0 0;
+  padding-top: 20px;
+  font-size: 28px;
+  color: #ef4160;
+  list-style: none;
+  text-align: center;
+  background-color: white;
+}
+  /*시설 선택 버튼 영역*/
 #mainContent>article#choiceFacilities{
   width: 523px;
   height: 820px;
 
   margin-top: 50px;
 }
-
+    /*상단 지역 안내문*/
+      /*도 단위 지역(굵은글씨)*/
 #mainContent>article#choiceFacilities>span#locationDo{
   margin-right: 53px;
   font-size: 64px;
   font-weight: bold;
   color: #ef4664;
 }
-
+      /* 작은 단위 지역(작은글씨)*/
 #mainContent>article#choiceFacilities>span#locationGu{
   font-size: 36px;
   color: #ef4160;
 }
-
+    /*"장애인 관련 센터" 버튼*/
 #mainContent>article#choiceFacilities>button#facilitiesCenter{
   width: 520px;
   height: 100px;
@@ -175,7 +100,7 @@ body {
   border-radius: 5px;
   background-color: white;
 }
-
+    /*"장애인 관련 편의시설" 버튼*/
 #mainContent>article#choiceFacilities>button#facilities{
   width: 520px;
   height: 100px;
@@ -187,7 +112,11 @@ body {
   border-radius: 5px;
   background: linear-gradient(to right,#df128b,#ff6f36);
 }
-
+      /*버튼 blur 지우기*/
 #mainContent>article#choiceFacilities>button:focus, #mainContent>article#choiceFacilities>button:active {
   outline: none;
+}
+      /* 버튼 클릭 표시 */
+#mainContent>article#choiceFacilities>button:hover, #mainContent>article#choiceFacilities>button:hover {
+  cursor: pointer;
 }
